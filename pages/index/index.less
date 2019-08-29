@@ -1,0 +1,47 @@
+/* pages/index/index.wxss */
+.shouye{
+    .swiper{
+        // 图片宽度/图片高度 = 变化后的图片宽度/变化后的图片高度
+        height:340rpx;
+    }
+    .nav{
+        // width: 100rpx;
+        // height: 100rpx;
+        // background: #000;
+        display: flex;
+        navigator{
+            flex: 1;
+            padding:25rpx;
+        }
+    }
+    .floor{
+        .floor_title{}
+        .product_list{
+            padding: 10rpx;
+            overflow: hidden;
+            // display: flex;
+            navigator{
+                float: left;
+                width: 33.33%;
+            //    flex:3;
+            &:nth-last-child(-n + 4){
+                // 原图的宽度/原图的高度 = 变化后的宽度/变化后的高度
+                // 变化后的高度=变化后的宽度*原图的高度/原图的宽度 
+                height: 207.9741379310345rpx;
+                padding-left: 10rpx;
+            }
+            &:nth-last-child(-n+2){
+                padding-top:10rpx;
+            }
+            image{
+                height:100%;
+            }
+            }
+            
+            
+
+           
+            
+        }
+    }
+}

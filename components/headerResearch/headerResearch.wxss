@@ -1,0 +1,12 @@
+/* components/headerResearch/headerResearch.wxss */
+.searchInput {
+  background: #eb4350;
+  padding: 10rpx 10rpx;
+}
+.searchInput .input {
+  background: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+}

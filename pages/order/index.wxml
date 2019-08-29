@@ -1,2 +1,27 @@
-<!--pages/order/index.wxml-->
-<text>pages/order/index.wxml</text>
+<view class="orderDetail">
+    <!--// 引进组件 -->
+    <tabs tabs="{{tabs}}"  binditemChange="handleChangeItem">
+        <!-- 列表内容     -->
+        <view class="first_tab">
+            <view 
+                class="item"
+                wx:for="{{historyOrder}}"
+                wx:key="order_id"
+                >
+                    <view class="num">
+                        <text>订单编号</text>
+                        <text>{{item.order_number}}</text>
+                    </view>
+                    <view class="num">
+                        <text>订单价格</text>
+                        <text >￥{{item.order_price}}</text>
+                    </view>
+                    <view class="num">
+                        <text>订单日期</text>
+                        <text>{{item.sureTime}}</text>
+                    </view>
+                </view>
+        </view>
+                
+    </tabs>
+</view>

@@ -1,1 +1,29 @@
 /* pages/index/index.wxss */
+.shouye .swiper {
+  height: 340rpx;
+}
+.shouye .nav {
+  display: flex;
+}
+.shouye .nav navigator {
+  flex: 1;
+  padding: 25rpx;
+}
+.shouye .floor .product_list {
+  padding: 10rpx;
+  overflow: hidden;
+}
+.shouye .floor .product_list navigator {
+  float: left;
+  width: 33.33%;
+}
+.shouye .floor .product_list navigator:nth-last-child(-n + 4) {
+  height: 207.9741379310345rpx;
+  padding-left: 10rpx;
+}
+.shouye .floor .product_list navigator:nth-last-child(-n+2) {
+  padding-top: 10rpx;
+}
+.shouye .floor .product_list navigator image {
+  height: 100%;
+}

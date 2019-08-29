@@ -1,2 +1,91 @@
-<!--pages/user/index.wxml-->
-<text>pages/user/index.wxml</text>
+<!-- 个人中心主页-->
+<view class="userHeader">
+    <view class="userBgPicture">
+        <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="userHPicture">
+        <image src="{{userInfo.avatarUrl}}"></image>
+        <text>{{userInfo.nickName}}</text>
+    </view>
+</view>
+<view class="allContent">
+ <view class="content">
+    <!-- 收藏夹-->
+    <view class="Faorites">
+        <view class="faoritesItem">
+            <navigator>
+                <text>0</text>
+                <text>收藏的店铺</text>
+            </navigator>
+        </view>
+        <view class="faoritesItem">
+            <navigator url="/pages/collect/index">
+                <text>{{collectInfo.length}}</text>
+                <text>收藏的商品</text>
+            </navigator>
+        </view>
+        <view class="faoritesItem">
+            <navigator>
+                <text>0</text>
+                <text>关注的商品</text>
+            </navigator>
+        </view>
+        <view class="faoritesItem">
+            <navigator>
+                <text>0</text>
+                <text>我的足迹</text>
+            </navigator>
+        </view>
+    </view>
+    </view>
+ <!--  我的订单-->
+    <view class="myOrder">
+        <text >我的订单</text>
+        <view class="myOrderWrap">
+            <navigator url="/pages/order/index?type=1">
+                <view class="iconfont iconrizhi"></view>
+                <view>全部订单</view>
+            </navigator>
+            <navigator url="/pages/order/index?type=2">
+                <view class="iconfont iconfukuantongzhi"></view>
+                <view>待付款</view>
+            </navigator>
+            <navigator url="/pages/order/index?type=3">
+                <view class="iconfont iconshouhuodizhi"></view>
+                <view>待收货</view>
+            </navigator>
+            <navigator url="/pages/order/index?type=4">
+                <view class="iconfont iconrmb"></view>
+                <view>退款/退货</view>
+            </navigator>
+        </view>
+    </view>
+    <!--  收货地址管理-->
+    <view class="receiverAddress">
+        <text class="word">收获地址管理</text>
+        <text class="symbol"> ＞ </text>
+    </view>
+    <!--  其他信息-->
+    <view class="otherInfo">
+       <view class="item">
+            <text class="word">联系客服</text>
+            <text class="symbol" style="flex:5"> 400-168-400 </text>
+       </view>
+        <view class="item">
+            <text class="word">意见反馈</text>
+            <text class="symbol"> ＞ </text>
+       </view>
+        <view class="item">
+            <text class="word">关于我们</text>
+            <text class="symbol"> ＞ </text>
+       </view>
+    </view>
+    <!-- 推荐-->
+    <view class="recommend">
+            <text class="word">把应用推荐给其他人</text>
+            <text class="symbol"> ＞ </text>
+       </view>
+</view>
+
+
+ 

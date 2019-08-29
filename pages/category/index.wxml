@@ -1,2 +1,47 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<view>
+<!-- // 全局搜索框组件引进 -->
+<view>
+    <headerResearch></headerResearch>
+</view>
+
+<view class="category">
+    <scroll-view class="categoryLeft" scroll-y>
+         <view
+         wx:for="{{categoryLeft}}"  
+         wx:key="cat_id" 
+         class="{{index===currentData?'active' : ''}}"
+         bindtap="handleTap"
+         data-index="{{index}}"
+         >
+             {{item.cat_name}}
+         </view>   
+    </scroll-view>
+    <scroll-view class="categoryRight" scroll-y scroll-top="{{scrollTop}}">
+            <view 
+            wx:for="{{categoryRight}}"
+            wx:key="cat_id"
+            wx:for-index="index1"
+            wx:for-item="item1"
+            >
+             <view class="title">
+                 <text>/</text>
+                 <text>{{item1.cat_name}}</text>
+                 <text>/</text>
+             </view>
+             <view
+            class="item2"
+            wx:for="{{item1.children}}"
+            wx:key="000"
+            wx:for-index="index2"
+            wx:for-item="item2"
+             >
+                <navigator url="/pages/goods_list/index?cid={{item2.cat_id}}">
+                        <image mode="widthFix" src="{{item2.cat_icon}}"></image>
+                        <view>{{item2.cat_name}}</view>
+                    </navigator>
+             </view>  
+            </view>
+              
+    </scroll-view>
+</view>
+</view>

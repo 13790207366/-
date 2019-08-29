@@ -1,4 +1,50 @@
-<view class="iconshouhuodizhi iconfont" >
-    
+<view class="shouye">
+    <view>
+        <headerResearch ></headerResearch>
+    </view>
+    <!-- 轮播图 -->
+    <swiper class="swiper" indicator-dots autoplay circular easing-function="linear">
+        <swiper-item
+        wx:for="{{swiperList}}"
+        wx:key="goods_id"
+        >
+            <navigator>
+                <image
+                mode="widthFix"
+                 src="{{item.image_src}}"
+                 ></image>
+            </navigator>
+        </swiper-item>
+    </swiper>
+    <!-- 导航 -->
+    <view class="nav">
+        <navigator wx:for="{{navList}}" wx:key="name" >
+            <image mode="widthFix" src="{{item.image_src}}"></image>
+        </navigator>
+    </view>
+    <!-- 楼层列表 -->
+    <view 
+    class="floor" 
+    wx:for="{{floorList}}"
+     wx:key="index1" 
+     wx:for-index="index1"
+     wx:for-item="item1"
+     >
+        
+         <view class="floor_title">
+             <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+         </view>
+         <view class="product_list">
+             <navigator 
+             wx:for="{{item1.product_list}}"
+            wx:key="name"
+            wx:for-index="index2"
+            wx:for-item="item2"
+             >
+                <image mode="{{index2===0 ? 'widthFix' : 'scaleToFill'}}" src="{{item2.image_src}}"></image>
+             </navigator>
+         </view>
+        
+    </view>
 </view>
   

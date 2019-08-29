@@ -1,1 +1,46 @@
-/* pages/collect/index.wxss */
+page {
+  background: #dedede;
+}
+.cate {
+  margin: 20rpx ;
+}
+.cate text {
+  background: #fff;
+  color: #000;
+  border: 1rpx solid #ccc;
+  padding: 10rpx;
+  margin: 10rpx;
+}
+.allGoodsInfo {
+  display: flex;
+  height: 200rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.allGoodsInfo .iamge {
+  flex: 2;
+  width: 50%;
+  padding: 40rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.allGoodsInfo .rightInfo {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10rpx;
+}
+.allGoodsInfo .rightInfo .goodsInfo {
+  font-size: 28rpx;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.allGoodsInfo .rightInfo .priceAndNum {
+  display: flex;
+  height: 35rpx;
+}

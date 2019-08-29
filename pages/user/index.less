@@ -1,0 +1,138 @@
+page{
+    background: #dedede;
+}
+// 用户中心头部
+.userHeader {
+    position: relative;
+  .userBgPicture {
+    height: 45vh;
+    image {
+        filter: blur(15rpx);
+        
+    }
+  }
+
+  .userHPicture {
+    position: absolute;
+    bottom: 120rpx;
+    left: 285rpx;
+    display: flex;
+    flex-direction: column;
+    image {
+        width: 180rpx;
+        height: 180rpx;
+        border-radius: 50%;
+    }
+
+    text {
+       text-align: center;
+       padding-top:50rpx;
+       color:#fff;
+    }
+  }
+}
+.allContent{
+    margin:0 20rpx;
+    
+  .content {
+    position: relative;
+    height: 10rpx;
+      // 收藏夹
+    .Faorites {
+        width: 100%;
+        background: #fff;
+        display: flex;
+        position: absolute;
+        top:-8vh;
+        left:0rpx ;
+        padding: 15rpx 0;
+      .faoritesItem {
+        flex:1;
+        navigator {
+            display: flex;
+            flex-direction: column;
+          text {
+            text-align: center;
+            &:first-child{
+                color: var(--themeColor);
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  // 我的订单
+  .myOrder {
+      margin-top: 25rpx;
+      background: #fff;
+    text {
+        display: flex;
+        padding: 20rpx;
+    }
+    .myOrderWrap {
+        display: flex;
+      navigator {
+          padding:15rpx 0;
+          flex:1;
+          text-align: center;
+          border-top: 1rpx solid #dedede;
+            view{
+                &:first-child{
+                    color:var(--themeColor);
+                    font-size: 50rpx;
+                }
+            } 
+          
+      }
+    }
+  }
+//   收货地址管理/
+.receiverAddress {
+    display: flex;
+    padding:20rpx 0 20rpx 15rpx;
+    background: #fff;
+    margin:20rpx 0;
+    font-size: 30rpx;
+    .word{
+        flex:12;
+    }
+    .symbol{
+        color:#aaa;
+        flex:1;
+    }
+  }
+//   其他信息
+  .otherInfo {
+    .item {
+        display: flex;
+    padding:20rpx 0 20rpx 15rpx;
+    background: #fff;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid #dedede;
+      .word {
+        flex:12;
+      }
+      .symbol {
+        color:#aaa;
+        flex:1;
+
+      }
+    }
+  }
+//   推荐
+.recommend {
+    display: flex;
+    padding:20rpx 0 20rpx 15rpx;
+    background: #fff;
+    margin:20rpx 0 100rpx;
+    font-size: 30rpx;
+    .word{
+        flex:12;
+    }
+    .symbol{
+        color:#aaa;
+        flex:1;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+/* pages/cart/index.wxss */
+page{
+    padding-bottom: 110rpx;
+}
+.cart{
+ 
+    // 添加商品信息
+    .shoppingCart{
+        margin-top:30rpx;
+        .title{
+            padding:20rpx 0 20rpx 20rpx;
+            font-weight: 600;
+            border-top:1rpx solid var(--themeColor);
+            border-bottom:1rpx solid var(--themeColor);
+            color:#000;
+            font-size: 35rpx;
+        }
+        .allGoodsInfo{
+            display: flex;
+            height: 200rpx;
+            border-bottom: 1rpx solid #ccc;
+            .iamge{
+                flex:2;
+                width: 50%;
+                padding: 40rpx 20rpx;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+            .rightInfo{
+                flex:3;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                // overflow: hidden;
+                padding: 10rpx;
+                .goodsInfo{
+                    font-size: 28rpx;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp:2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+                .priceAndNum{
+                    display: flex;
+                    height: 35rpx;
+                    .price{
+                        flex:3;
+                        color:var(--themeColor);
+                        font-size: 35rpx;
+                    }
+                    .number{
+                        flex:2;
+                        display: flex; 
+                        .num{
+                            flex:1;
+                            text-align: center;
+                            height: 50rpx;
+                            line-height: 50rpx;
+                            padding:0 15rpx;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+    }
+    // 底部结算区域
+    .bottom{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        border-top:1rpx solid #ccc;
+        display:flex;
+        background: #fff;
+        .allPrice{
+            text-align:center;
+            flex:3;
+            padding: 10rpx;
+
+        }
+        .submit{
+            flex:2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--themeColor);
+            color:white;
+            font-weight: 600;
+            font-size: 34rpx;
+        }
+    }
+}

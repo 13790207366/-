@@ -1,1 +1,121 @@
-/* pages/user/index.wxss */
+page {
+  background: #dedede;
+}
+.userHeader {
+  position: relative;
+}
+.userHeader .userBgPicture {
+  height: 45vh;
+}
+.userHeader .userBgPicture image {
+  filter: blur(15rpx);
+}
+.userHeader .userHPicture {
+  position: absolute;
+  bottom: 120rpx;
+  left: 285rpx;
+  display: flex;
+  flex-direction: column;
+}
+.userHeader .userHPicture image {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+}
+.userHeader .userHPicture text {
+  text-align: center;
+  padding-top: 50rpx;
+  color: #fff;
+}
+.allContent {
+  margin: 0 20rpx;
+}
+.allContent .content {
+  position: relative;
+  height: 10rpx;
+}
+.allContent .content .Faorites {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  position: absolute;
+  top: -8vh;
+  left: 0rpx ;
+  padding: 15rpx 0;
+}
+.allContent .content .Faorites .faoritesItem {
+  flex: 1;
+}
+.allContent .content .Faorites .faoritesItem navigator {
+  display: flex;
+  flex-direction: column;
+}
+.allContent .content .Faorites .faoritesItem navigator text {
+  text-align: center;
+}
+.allContent .content .Faorites .faoritesItem navigator text:first-child {
+  color: var(--themeColor);
+}
+.allContent .myOrder {
+  margin-top: 25rpx;
+  background: #fff;
+}
+.allContent .myOrder text {
+  display: flex;
+  padding: 20rpx;
+}
+.allContent .myOrder .myOrderWrap {
+  display: flex;
+}
+.allContent .myOrder .myOrderWrap navigator {
+  padding: 15rpx 0;
+  flex: 1;
+  text-align: center;
+  border-top: 1rpx solid #dedede;
+}
+.allContent .myOrder .myOrderWrap navigator view:first-child {
+  color: var(--themeColor);
+  font-size: 50rpx;
+}
+.allContent .receiverAddress {
+  display: flex;
+  padding: 20rpx 0 20rpx 15rpx;
+  background: #fff;
+  margin: 20rpx 0;
+  font-size: 30rpx;
+}
+.allContent .receiverAddress .word {
+  flex: 12;
+}
+.allContent .receiverAddress .symbol {
+  color: #aaa;
+  flex: 1;
+}
+.allContent .otherInfo .item {
+  display: flex;
+  padding: 20rpx 0 20rpx 15rpx;
+  background: #fff;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #dedede;
+}
+.allContent .otherInfo .item .word {
+  flex: 12;
+}
+.allContent .otherInfo .item .symbol {
+  color: #aaa;
+  flex: 1;
+}
+.allContent .recommend {
+  display: flex;
+  padding: 20rpx 0 20rpx 15rpx;
+  background: #fff;
+  margin: 20rpx 0 100rpx;
+  font-size: 30rpx;
+}
+.allContent .recommend .word {
+  flex: 12;
+}
+.allContent .recommend .symbol {
+  color: #aaa;
+  flex: 1;
+}

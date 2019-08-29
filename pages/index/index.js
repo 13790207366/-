@@ -1,3 +1,4 @@
+import { request } from "../../request/index.js"
 // pages/index/index.js
 Page({
 
@@ -5,14 +6,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 轮播图
+    swiperList:[],
+    // 导航栏
+    navList:[],
+    // 楼层
+    floorList:[]
   },
-
+  // 获取轮播图数据
+  getSwiperList(){
+    request({url: '/home/swiperdata'}).then((result)=>{
+        this.setData({
+          swiperList:result
+        })
+      });
+  },
+  //  获取导航栏
+  getNavTab(){
+   request({url: '/home/catitems'}).then((result)=>{
+      this.setData({
+        navList:result
+      })
+    });
+  }, 
+// 获取楼层
+getFloor(){
+  request({url: '/home/floordata'}).then((result)=>{
+    this.setData({
+      floorList:result
+    })
+  });
+},
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getSwiperList();
+    this.getNavTab(),
+    this.getFloor()
   },
 
   /**

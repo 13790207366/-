@@ -1,2 +1,33 @@
-<!--pages/goods_list/index.wxml-->
-<text>pages/goods_list/index.wxml</text>
+<!-- // 搜索框组件 -->
+        <headerResearch></headerResearch>
+    <!-- tab栏组件 -->
+        <tabs tabs="{{tabs}}" binditemChange="handleChangeItem">
+             <!-- 列表内容     -->
+             <blcok wx:if="{{tabs[0].isActive}}">
+
+                 
+                        <view 
+                        class="listPage" 
+                        wx:for="{{listPage}}"
+                        wx:key="goods_id"
+                        >
+                        
+                            <!-- 左边图片 -->
+                            <view class="leftImage">
+                                <image mode="widthFix" src="{{item.goods_small_logo || 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=686516802,2403556179&fm=15&gp=0.jpg'}}"></image>
+                            </view>
+                               <!-- 右边详情信息 -->
+                               <view class="rightMessage">
+                                <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" open-type="navigate">
+                                   <view class="goodsInfo">{{item.goods_name}}</view>
+                                   <text class="goodsPrice">￥{{item.goods_price}}</text>
+                                </navigator>
+                               </view>
+                            
+                        </view>
+                 
+                   
+             </blcok>
+             <blcok wx:elif="{{tabs[1].isActive}}">你的网络已断开，请稍后重试</blcok>
+             <blcok wx:elif="{{tabs[2].isActive}}">你的网络已断开，请稍后重试</blcok>
+        </tabs>
